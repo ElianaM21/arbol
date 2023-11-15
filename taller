@@ -71,8 +71,10 @@ class Arbol:
         derecha = self._altura(nodo.derecha)
         return 1 + max(izquierda, derecha)
 
+valores_str = input("Ingrese valores separados por comas: ")
+valores = [int(valor) for valor in valores_str.split(',')]
+
 arbol = Arbol()
-valores = [30, 8, 5, 36, 72, 12, 3, 67, 2, 44]
 
 for valor in valores:
     arbol.insertar(valor)
